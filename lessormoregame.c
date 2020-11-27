@@ -16,6 +16,7 @@ int main ()
      printf("to play with a friend chose 2\n");
         scanf("%d",&mode);
  switch (mode) 
+ 
  {
    case 1:
     printf("----you are now playing with the computer----\n\n");
@@ -23,6 +24,7 @@ int main ()
             printf("level 1: the number will be from 0 to 100 \n");
             printf("level 2: the number will be from 0 to 1000 \n");
             printf("level 3: the number will be from 0 to 10000 \n");
+            printf("you can select by tapping the number of the level\n");
         printf("which level do you want?\n");
             scanf("%d",&level);
             system("cls");
@@ -30,11 +32,11 @@ int main ()
 switch (level)
 {
     case 1:
-        printf("you have just selected level 1\n\n");
+        printf("you have just selected level 1: the number will be from 0 to 100\n\n");
                  number = rand() % 100;
-            do{
-                printf("to start press 0");
-                scanf("%d",attempts);
+                                         attempts=0;
+                                        do{
+              
                                          attempts++;
                         printf("what is the number that the computer chosen ?\n");
                             scanf("%d",&playernumber);
@@ -55,12 +57,12 @@ switch (level)
     break;
 
     case 2:
-            printf("you have just selected level 2\n\n");
+            printf("you have just selected level 2: the number will be from 0 to 1000\n\n");
                 number = rand() % 1000;
-            
+                                         attempts=0;
+                
             do{
-                 printf("to start press 0");
-                scanf("%d",attempts);
+                
                                          attempts++;
                         printf("what is the number that the computer chosen ?\n");
                             scanf("%d",&playernumber);
@@ -81,12 +83,13 @@ switch (level)
     break;
 
     case 3:
-            printf("you have just selected level 3\n\n");
+            printf("you have just selected level 3: the number will be from 0 to 10000\n\n");
                 
                 number = rand() % 10000;
-            do{
-                 printf("to start press 0");
-                scanf("%d",attempts);
+          
+                                        attempts=0;
+                         do{
+                 
                                          attempts++;
                         printf("what is the number that the computer chosen ?\n");
                             scanf("%d",&playernumber);
@@ -119,11 +122,11 @@ switch (level)
                         scanf("%d",&number);
                         system("cls");
                 printf("your friend just choosen a random number now guess it ?\n");
-                
- do{
-      printf("to start press 0");
-                scanf("%d",attempts);
-                                         attempts++;
+                                        attempts=0;
+ 
+                                      do{
+     
+                                        attempts++;
                         printf("what is the number that your friend chosen ?\n");
                             scanf("%d",&playernumber);
                         
